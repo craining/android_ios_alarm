@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/normal_bg"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_default"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_picktagreturn"
+            android:layout_width="55dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="3.0dip"
+            android:background="@drawable/bg_btn_return"
+            android:gravity="center"
+            android:text="@string/alarm_pick_return"
+            android:textColor="#ffffff"
+            android:textSize="14.0dip" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/alarm_tag"
+            android:textColor="#ffffff"
+            android:textSize="18.0dip" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/edit_alarmtag"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="50dip"
+        android:background="@drawable/rounded_edittext"
+        android:paddingBottom="5dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:paddingTop="5dip" />
+
+</LinearLayout>

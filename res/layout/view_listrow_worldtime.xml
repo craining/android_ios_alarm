@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="100dip"
+    android:background="@drawable/ilistrow_bg"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_worldtimeedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip" />
+
+        <TextView
+            android:id="@+id/text_cityname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+        android:orientation="horizontal" >
+
+        <com.easyandroid.ialarm.views.clock.IClockView
+            android:id="@+id/clockview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            handCenterHeightScale="0.512"
+            handCenterWidthScale="0.477"
+            hourHandSize="35"
+            minuteHandSize="45"
+            scale="1.0"
+            secondHandSize="52" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text_clocknum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dip"
+                android:textColor="@color/color_black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dip"
+                android:textColor="@color/color_black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_editdelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="3dip"
+            android:src="@drawable/lists"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_editdelete"
+            android:layout_width="55dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="3dip"
+            android:background="@drawable/bg_btn_red"
+            android:text="@string/worldtime_delete"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

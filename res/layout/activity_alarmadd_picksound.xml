@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/normal_bg"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_default"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_picksoundreturn"
+            android:layout_width="55dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="3.0dip"
+            android:background="@drawable/bg_btn_return"
+            android:gravity="center"
+            android:text="@string/alarm_pick_return"
+            android:textColor="#ffffff"
+            android:textSize="14.0dip" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/alarm_sound"
+            android:textColor="#ffffff"
+            android:textSize="18.0dip" />
+    </FrameLayout>
+
+    <com.easyandroid.ialarm.views.list.CornerMoveListView
+        android:id="@+id/list_alarmadd_picksound_slient"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/shape"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none" />
+
+    <com.easyandroid.ialarm.views.list.CornerMoveListView
+        android:id="@+id/list_alarmadd_picksound"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/shape"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none" />
+
+</LinearLayout>

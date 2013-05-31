@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/moreList"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/normal_bg" >
+
+    <FrameLayout
+        android:id="@+id/topview9"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_default"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancle"
+            android:layout_width="55dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="3.0dip"
+            android:background="@drawable/bg_btn_blue"
+            android:gravity="center"
+            android:text="@string/selectsound_cancle"
+            android:textColor="#ffffff"
+            android:textSize="14.0dip" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/selectsound_title"
+            android:textColor="#ffffff"
+            android:textSize="18.0dip" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="55dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="3.0dip"
+            android:background="@drawable/bg_btn_blue"
+            android:gravity="center"
+            android:text="@string/selectsound_ok"
+            android:textColor="#ffffff"
+            android:textSize="14.0dip" />
+    </FrameLayout>
+
+    <com.easyandroid.ialarm.views.list.CornerMoveListView
+        android:id="@+id/ilist_sounds_sleepmode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topview9"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/shape"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none" />
+    
+    <com.easyandroid.ialarm.views.list.CornerMoveListView
+        android:id="@+id/ilist_sounds"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ilist_sounds_sleepmode"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/shape"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none" />
+
+</RelativeLayout>

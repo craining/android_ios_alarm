@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.easyandroid.ialarm.views.tab.ITabViewLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- World time -->
+
+    <LinearLayout
+        android:id="@+id/TabLayout_One"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_worldtime" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible" >
+
+            <FrameLayout
+                android:id="@+id/worldtimetopview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/title_default"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_worldtime_edit"
+                    android:layout_width="55dip"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="3.0dip"
+                    android:background="@drawable/blue_button_default"
+                    android:gravity="center"
+                    android:text="@string/worldtime_edit"
+                    android:textColor="#ffffff"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dip"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/worldtime_title"
+                    android:textColor="#ffffff"
+                    android:textSize="18.0dip" />
+
+                <ImageView
+                    android:id="@+id/imgbtn_worldtime_add"
+                    android:layout_width="45dip"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="3.0dip"
+                    android:background="@drawable/bg_btn_blue"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_add" />
+            </FrameLayout>
+
+            <com.easyandroid.ialarm.views.list.IListView
+                android:id="@+id/lis_worldtime"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/worldtimetopview"
+                android:layout_marginBottom="60dip"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- Alarm -->
+
+    <LinearLayout
+        android:id="@+id/TabLayout_Two"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_alarm" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible" >
+
+            <FrameLayout
+                android:id="@+id/alarmtopview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/title_default"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_alarmtime_edit"
+                    android:layout_width="55dip"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="3.0dip"
+                    android:background="@drawable/blue_button_default"
+                    android:gravity="center"
+                    android:text="@string/alarm_edit"
+                    android:textColor="#ffffff"
+                    android:textSize="14.0dip" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="45.0dip"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/alarm_title"
+                    android:textColor="#ffffff"
+                    android:textSize="18.0dip" />
+
+                <ImageView
+                    android:id="@+id/imgbtn_alarmtime_add"
+                    android:layout_width="45dip"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="3.0dip"
+                    android:background="@drawable/bg_btn_blue"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_add" />
+            </FrameLayout>
+
+            <com.easyandroid.ialarm.views.list.IListView
+                android:id="@+id/lis_alarm"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/alarmtopview"
+                android:layout_marginBottom="60dip"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- stop wathc -->
+
+    <RelativeLayout
+        android:id="@+id/TabLayout_Three"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_stopwatch"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layout_show_stopwatchtime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_stopwatch_bg" >
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_showtime_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dip"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/text_stopwatch_1_minute_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_num0"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/text_stopwatch_1_minute_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_num0"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_doublepoint"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/text_stopwatch_1_second_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_num0"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/text_stopwatch_1_second_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_num0"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_point"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/text_stopwatch_1_msecond_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_num0"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_showtime_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_showtime_1"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/text_stopwatch_2_minute_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_num0"
+                    android:textSize="70sp" />
+
+                <TextView
+                    android:id="@+id/text_stopwatch_2_minute_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_num0"
+                    android:textSize="70sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_doublepoint"
+                    android:textSize="70sp" />
+
+                <TextView
+                    android:id="@+id/text_stopwatch_2_second_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_num0"
+                    android:textSize="70sp" />
+
+                <TextView
+                    android:id="@+id/text_stopwatch_2_second_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_num0"
+                    android:textSize="70sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_point"
+                    android:textSize="70sp" />
+
+                <TextView
+                    android:id="@+id/text_stopwatch_2_msecond_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_num0"
+                    android:textSize="70sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TableLayout
+            android:id="@+id/tab_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:stretchColumns="0,1" >
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btn_stopwatch_ctrl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="0"
+                    android:layout_marginRight="12dip"
+                    android:background="@drawable/btn_bg_green"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/stopwatch_btn_start"
+                    android:textColor="@color/color_white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_stopwatch_count"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_column="1"
+                    android:layout_marginLeft="12dip"
+                    android:background="@drawable/btn_stopwatchclicked"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/stopwatch_btn_clear"
+                    android:textColor="@color/color_lightgrey"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+        <com.easyandroid.ialarm.views.list.IListView
+            android:id="@+id/list_stopwatch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tab_btn"
+            android:layout_marginBottom="40dip"
+            android:layout_marginTop="25dip"
+            android:background="@color/color_black"
+            android:cacheColorHint="#00000000"
+            android:clickable="false"
+            android:fadingEdge="none" />
+    </RelativeLayout>
+    <!--timer -->
+
+    <RelativeLayout
+        android:id="@+id/TabLayout_Four"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_timer"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layout_showtime"
+            android:layout_width="fill_parent"
+            android:layout_height="190dip"
+            android:layout_marginTop="20dip"
+            android:orientation="horizontal" >
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="35dip"
+                android:stretchColumns="0,1,2,3,4,5,6,7" >
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/text_timer_hour_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/text_timer_hour_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/text_timer_doublepoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:text="@string/text_doublepoint"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/text_timer_minute_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="3"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/text_timer_minute_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="5"
+                        android:text="@string/text_doublepoint"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/text_timer_second_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="6"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/text_timer_second_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="7"
+                        android:textSize="70sp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layot_timepick"
+            android:layout_width="fill_parent"
+            android:layout_height="190dip"
+            android:layout_below="@id/layout_showtime"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="20dip"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp" >
+
+            <com.easyandroid.ialarm.views.wheel.WheelView
+                android:id="@+id/hour"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+
+            <com.easyandroid.ialarm.views.wheel.WheelView
+                android:id="@+id/mins"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layout_selectsound_timer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btn_selectsound"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dip"
+                android:layout_marginRight="13dip"
+                android:background="@drawable/bg_btn_timerselect" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dip"
+                android:src="@drawable/listarrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layout_ctrl_timer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btn_timerctrl"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/layout_selectsound_timer"
+                android:layout_marginLeft="13dip"
+                android:layout_marginRight="13dip"
+                android:background="@drawable/btn_bg_green"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.easyandroid.ialarm.views.tab.ITabView
+        android:id="@+id/Tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true" />
+
+</com.easyandroid.ialarm.views.tab.ITabViewLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addCity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_lightgrey"
+    android:descendantFocusability="afterDescendants"
+    android:focusable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_cityaddbg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_worldtimetext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/worldtime_selectcity"
+            android:textColor="@color/color_black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/search_edit_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:addStatesFromChildren="true"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dip"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/search_src_text"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/rounded_edittext"
+                android:drawableLeft="@drawable/search_icon"
+                android:layout_marginLeft="10dip"
+                android:drawablePadding="10dip"
+                android:inputType="text"
+                android:paddingLeft="8dip"
+                android:paddingRight="6dip"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"/>
+
+            <Button
+                android:id="@+id/search_cancel_button"
+                android:layout_width="55dip"
+                android:layout_height="35dip"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/bg_btn_blue"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/worldtime_selectcity_cancle" 
+                android:layout_marginRight="10dip"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/addcityListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none" >
+    </ListView>
+
+</LinearLayout>

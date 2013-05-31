@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="150dip"
+    android:layout_marginLeft="10dip"
+    android:layout_marginRight="10dip"
+    android:background="@drawable/dlg_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text_alarmon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:gravity="center_horizontal"
+        android:textColor="@color/color_white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layout_ok"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_alarmok_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dlg_button"
+            android:focusable="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/btn_ok"
+            android:textColor="@color/color_white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/layout_ok_sleep"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center"
+        android:shrinkColumns="0,1" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/btn_alarmsleep"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/dlg_button"
+                android:focusable="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/btn_sleep"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_alarmok_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/dlg_button"
+                android:focusable="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/btn_ok"
+                android:textColor="@color/color_white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

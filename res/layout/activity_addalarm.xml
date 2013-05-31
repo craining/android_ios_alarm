@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/moreList"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/normal_bg" >
+
+    <FrameLayout
+        android:id="@+id/alarm_topview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:background="@drawable/title_default"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_alarmaddcancle"
+            android:layout_width="55dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="3.0dip"
+            android:background="@drawable/bg_btn_blue"
+            android:gravity="center"
+            android:text="@string/selectsound_cancle"
+            android:textColor="#ffffff"
+            android:textSize="14.0dip" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/alarm_add"
+            android:textColor="#ffffff"
+            android:textSize="18.0dip" />
+
+        <Button
+            android:id="@+id/btn_alarmaddok"
+            android:layout_width="55dip"
+            android:layout_height="35dip"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="3.0dip"
+            android:background="@drawable/bg_btn_blue"
+            android:gravity="center"
+            android:text="@string/alarm_addok"
+            android:textColor="#ffffff"
+            android:textSize="14.0dip" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_showaddalarmlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alarm_topview"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip" >
+
+        <com.easyandroid.ialarm.views.list.CornerListView
+            android:id="@+id/list_alarmadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:cacheColorHint="#00000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_alarmadd_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_showaddalarmlist"
+        android:background="@drawable/layout_alarmadd_bg" >
+
+        <View
+            android:id="@+id/view_alarmadd"
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@color/color_stealbule" />
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/alarmadd_wheellayout"
+            android:layout_width="fill_parent"
+            android:layout_height="190dip"
+            android:layout_below="@id/view_alarmadd"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dip"
+            android:layout_marginRight="60dip"
+            android:layout_marginTop="15dip"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp" >
+
+            <com.easyandroid.ialarm.views.wheel.WheelView
+                android:id="@+id/wheel_alarmaddhour"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+
+            <com.easyandroid.ialarm.views.wheel.WheelView
+                android:id="@+id/wheel_alarmaddmins"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
